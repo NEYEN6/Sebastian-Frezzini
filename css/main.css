@@ -19,7 +19,7 @@ a {
   background-size: 600px;
   background-position: center right 80px;
   background-repeat: no-repeat;
-  background-image: url("/img/4.jpg");
+  background-image: url("../img/4.jpg");
   background-color: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%); }
 
 nav {
