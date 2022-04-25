@@ -80,12 +80,12 @@ nav {
     font-size: 17px;
     font-family: 'Abel'; }
 
-.cv-btn {
-  width: 200px;
-  height: 45px;
+.cv-btn, .about-text button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  height: 45px;
   background-color: #a5a5a5;
   border-radius: 15px;
   color: #fff;
@@ -93,7 +93,7 @@ nav {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 500; }
-  .cv-btn :hover {
+  .cv-btn :hover, .about-text button :hover {
     color: #a5a5a5;
     transition: all ease 0.5s;
     font-weight: bold; }
@@ -136,29 +136,12 @@ nav {
     font-size: 17px;
     color: #000;
     font-weight: 300px; }
-  .about-text button {
-    width: 200px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #a5a5a5;
-    border-radius: 15px;
-    color: #fff;
-    font-family: "BenchNine";
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 500; }
-    .about-text button :hover {
-      color: #292929;
-      transition: all ease 0.5s;
-      font-weight: bold; }
 
 .about-model img {
-  height: 350px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 350px;
   padding-right: 20px; }
 
 /* card */
@@ -174,8 +157,8 @@ nav {
   background-blend-mode: soft-light; }
   .proyects h1 {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-size: 60px;
     font-weight: 500;
     line-height: 1.5;
@@ -315,15 +298,15 @@ nav {
 
 /* Shop */
 .card-body {
-  border: 2px solid #000;
+  border: 1px solid #000;
   margin-bottom: 30px; }
 
 .row {
   margin-top: 80px; }
   .row h1 {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-size: 60px;
     font-weight: 500;
     line-height: 1.5;
@@ -339,11 +322,15 @@ nav {
 .text-uppercase {
   color: #a5a5a5; }
 
-.redes a {
-  color: white; }
+/*Creamos el bucle para usar los valores del mapa*/
+.btn--twitter {
+  color: #00acee; }
 
-.redes a:hover {
-  color: #fffb00; }
+.btn--facebook {
+  color: #3b5998; }
+
+.btn--instagram {
+  color: #C13584; }
 
 /* Formulario */
 .body {
@@ -351,8 +338,8 @@ nav {
   margin-top: 80px; }
   .body h1 {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-size: 60px;
     font-weight: 500;
     color: #000; }
@@ -379,12 +366,12 @@ nav {
   opacity: 0.8; }
 
 .contact_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 38%;
   position: relative;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: url(../img/fondo.jpg);
   background-size: cover;
   background-position: center center; }
@@ -599,7 +586,12 @@ form.form_contact {
     padding: 0px 20px; }
   form.form_contact h2 {
     font-size: 20px;
-    font-weight: 600; } }
+    font-weight: 600; }
+  .card-body {
+    border: 0px solid #000;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    margin-bottom: 30px; } }
 
 @media (max-width: 600px) {
   .about-text h1 {

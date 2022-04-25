@@ -1,6 +1,8 @@
-@import "variables";
+@import "_variables";
+@import "_colors";
+@import "_justify";
 body {
-    background-color: $color-blanco;
+    background-color: $primary_color;
     margin: 0px;
     padding: 0px;
 }
@@ -40,7 +42,7 @@ nav {
     height: 70px;
     box-sizing: border-box;
     padding: 10px 50px;
-    background-color: $color-blanco;
+    background-color: $primary_color;
     z-index: 1;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.50);
 }
@@ -49,7 +51,7 @@ nav {
     display: flex;
     li a {
         padding: 10px 15px;
-        color: $color-negro;
+        color: $_color-negro;
         font-size: 15px;
         margin-left: 10px;
         border-radius: 10px;
@@ -59,7 +61,7 @@ nav {
 
 .logo a {
     font-size: 50px;
-    color: $color-negro;
+    color: $_color-negro;
     font-family: 'Nanum Brush Script';
     cursor: pointer;
     text-decoration: none;
@@ -71,8 +73,8 @@ nav {
 
 .active a,
 .menu li a:hover {
-    background-color: $color-gris;
-    color: $color-blanco !important;
+    background-color: $second_color;
+    color: $primary_color !important;
     transition: all ease 0.4s;
 }
 
@@ -89,27 +91,25 @@ nav {
         color: #292929;
     }
     p {
-        color: $color-negro;
+        color: $_color-negro;
         font-size: 17px;
         font-family: 'Abel';
     }
 }
 
 .cv-btn {
+    @include justify;
     width: 200px;
     height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-gris;
+    background-color: $second_color;
     border-radius: 15px;
-    color: $color-blanco;
+    color: $primary_color;
     font-family: $font-family-one;
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 500;
      :hover {
-        color: $color-gris;
+        color: $second_color;
         transition: all ease 0.5s;
         font-weight: bold;
     }
@@ -121,7 +121,7 @@ nav {
 #about {
     width: 100%;
     height: 45vh;
-    background-color: $color-blanco;
+    background-color: $primary_color;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -142,12 +142,12 @@ nav {
     width: 50%;
     h1 {
         font-size: 60px;
-        color: $color-negro;
+        color: $_color-negro;
         font-family: 'Open sans';
     }
     h2 {
         font-size: 30px;
-        color: $color-negro;
+        color: $_color-negro;
         font-weight: 400;
     }
     h1,
@@ -157,35 +157,17 @@ nav {
     }
     p {
         font-size: 17px;
-        color: $color-negro;
+        color: $_color-negro;
         font-weight: 300px;
     }
     button {
-        width: 200px;
-        height: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-gris;
-        border-radius: 15px;
-        color: $color-blanco;
-        font-family: $font-family-one;
-        font-size: 20px;
-        letter-spacing: 1px;
-        font-weight: 500;
-         :hover {
-            color: #292929;
-            transition: all ease 0.5s;
-            font-weight: bold;
-        }
+        @extend .cv-btn;
     }
 }
 
 .about-model img {
+    @include justify;
     height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-right: 20px;
 }
 
@@ -194,22 +176,20 @@ nav {
 
 .proyects {
     margin-top: 80px;
-    background-color: $color-blanco;
+    background-color: $primary_color;
     padding-bottom: 50px;
     background-image: url(/img/pc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: $color-gris;
+    background-color: $second_color;
     background-blend-mode: soft-light;
     h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include justify;
         font-size: 60px;
         font-weight: 500;
         line-height: 1.5;
-        color: $color-negro;
+        color: $_color-negro;
         font-family: 'Open sans';
     }
 }
@@ -296,7 +276,7 @@ nav {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 0.7em;
-    color: $color-blanco;
+    color: $primary_color;
     padding: 0.5em;
 }
 
@@ -304,7 +284,7 @@ nav {
     position: absolute;
     left: 1em;
     bottom: 1em;
-    color: $color-blanco;
+    color: $primary_color;
     z-index: 5;
     font-size: 0.8em;
 }
@@ -372,20 +352,18 @@ nav {
 /* Shop */
 
 .card-body {
-    border: 2px solid $color-negro;
+    border: 1px solid $_color-negro;
     margin-bottom: 30px;
 }
 
 .row {
     margin-top: 80px;
     h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include justify;
         font-size: 60px;
         font-weight: 500;
         line-height: 1.5;
-        color: $color-negro;
+        color: $_color-negro;
         background: none;
         font-family: 'Open sans';
     }
@@ -400,15 +378,19 @@ nav {
 /* Footer */
 
 .text-uppercase {
-    color: $color-gris;
+    color: $second_color;
 }
 
-.redes {
-    a {
-        color: rgb(255, 255, 255);
-    }
-    a:hover {
-        color: #fffb00;
+$redes: ( twitter: #00acee,
+facebook: #3b5998,
+instagram: #C13584);
+
+/*Creamos el bucle para usar los valores del mapa*/
+
+@each $red,
+$color in $redes {
+    .btn--#{$red} {
+        color: $color;
     }
 }
 
@@ -419,12 +401,10 @@ nav {
     font-family: 'Open sans';
     margin-top: 80px;
     h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include justify;
         font-size: 60px;
         font-weight: 500;
-        color: $color-negro;
+        color: $_color-negro;
     }
 }
 
@@ -449,17 +429,15 @@ nav {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: $color-gris;
+    background-color: $second_color;
     opacity: 0.8;
 }
 
 .contact_info {
+    @include justify;
     width: 38%;
     position: relative;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: url(../img/fondo.jpg);
     background-size: cover;
     background-position: center center;
@@ -469,7 +447,7 @@ nav {
 .info_items {
     position: relative;
     z-index: 2;
-    color: $color-negro;
+    color: $_color-negro;
     margin-bottom: 60px;
 }
 
@@ -514,7 +492,7 @@ form.form_contact {
     h2 {
         font-size: 30px;
         font-weight: 600;
-        color: $color-negro;
+        color: $_color-negro;
         margin-bottom: 30px;
     }
     .user_info {
@@ -529,27 +507,27 @@ form.form_contact {
         width: 100%;
         margin-bottom: 30px;
         border: none;
-        border-bottom: 2px solid $color-gris;
+        border-bottom: 2px solid $second_color;
         padding: 8px 0px 5px;
-        color: $color-negro;
+        color: $_color-negro;
         font-size: 14px;
         font-weight: 600;
     }
     input[type="button"] {
         width: 180px;
-        background-color: $color-gris;
+        background-color: $second_color;
         padding: 10px;
         border: none;
         border-radius: 25px;
         align-self: flex-end;
         font-size: 16px;
         font-weight: 600;
-        color: $color-negro;
+        color: $_color-negro;
         cursor: pointer;
     }
     input[type="button"]:hover {
-        color: $color-blanco;
+        color: $primary_color;
     }
 }
 
-@import "media-query";
+@import "_media-query";

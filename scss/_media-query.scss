@@ -173,6 +173,12 @@
         font-size: 20px;
         font-weight: 600;
     }
+    .card-body {
+        border: 0px solid $_color-negro;
+        border-bottom: 1px solid $_color-negro;
+        border-top: 1px solid $_color-negro;
+        margin-bottom: 30px;
+    }
 }
 
 @media(max-width:600px) {
