@@ -12,6 +12,19 @@ a {
 :focus {
   outline: none; }
 
+.ir-arriba {
+  z-index: 9;
+  display: none;
+  padding: 15px 20px;
+  background: #000;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px; }
+
 #main {
   position: relative;
   width: 100%;
@@ -93,10 +106,12 @@ nav {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 500; }
-  .cv-btn :hover, .about-text button :hover {
-    color: #a5a5a5;
-    transition: all ease 0.5s;
-    font-weight: bold; }
+
+.cv-btn:hover, .about-text button:hover {
+  color: #000;
+  transition: all ease 1s;
+  font-weight: bold;
+  text-decoration: none; }
 
 /* aboute me */
 #about {
@@ -245,6 +260,14 @@ nav {
   color: #fff;
   z-index: 5;
   font-size: 0.8em; }
+  .car-title .btn-proyect {
+    color: #000;
+    background-color: #a5a5a5;
+    font-size: 15px;
+    font-family: '$font-one';
+    border: 0px;
+    border-radius: 5px;
+    font-weight: 500; }
 
 .car.form {
   position: relative; }
@@ -300,6 +323,19 @@ nav {
 .card-body {
   border: 1px solid #000;
   margin-bottom: 30px; }
+  .card-body .btn-comprar {
+    background-color: #a5a5a5;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    align-self: flex-end;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer; }
+  .card-body .btn-comprar:hover {
+    color: #fff;
+    transition: all 0.5s; }
 
 .row {
   margin-top: 80px; }

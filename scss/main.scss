@@ -19,6 +19,20 @@ a {
     outline: none;
 }
 
+.ir-arriba {
+    z-index: 9;
+    display: none;
+    padding: 15px 20px;
+    background: $_color-negro;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+}
+
 #main {
     position: relative;
     width: 100%;
@@ -108,11 +122,13 @@ nav {
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 500;
-     :hover {
-        color: $second_color;
-        transition: all ease 0.5s;
-        font-weight: bold;
-    }
+}
+
+.cv-btn:hover {
+    color: $_color-negro;
+    transition: all ease 1s;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 
@@ -287,6 +303,15 @@ nav {
     color: $primary_color;
     z-index: 5;
     font-size: 0.8em;
+    .btn-proyect {
+        color: #000;
+        background-color: $second_color;
+        font-size: 15px;
+        font-family: '$font-one';
+        border: 0px;
+        border-radius: 5px;
+        font-weight: 500;
+    }
 }
 
 .car.form {
@@ -354,6 +379,21 @@ nav {
 .card-body {
     border: 1px solid $_color-negro;
     margin-bottom: 30px;
+    .btn-comprar {
+        background-color: $second_color;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        align-self: flex-end;
+        font-size: 16px;
+        font-weight: 600;
+        color: $_color-negro;
+        cursor: pointer;
+    }
+    .btn-comprar:hover {
+        color: $primary_color;
+        transition: all 0.5s;
+    }
 }
 
 .row {
